@@ -45,8 +45,7 @@ export const PhoneBook = () => {
             name,
             phoneNumbers: [phone],
         }
-        const newName = name;
-        console.log(newName)
+
         if (name && phone.length === 13) {
             await addContact(newContact);
             await loadPeople();
