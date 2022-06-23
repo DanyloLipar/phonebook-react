@@ -1,0 +1,180 @@
+@import './normalize.scss';
+@import './vars.scss';
+
+.content {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    width: 300px;
+
+    &__title {
+        cursor: pointer;
+    }
+}
+
+.details {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    padding-top: 280px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+
+    &__window {
+        position: relative;
+        background-color: $white-color;
+        margin: auto;
+        width: 400px;
+        border-radius: 20px;
+        text-align: center;
+    }
+}
+
+.window {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    &__text {
+        display: flex;
+        align-items: center;
+        padding-top: 15px;
+
+        &-inpt {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        &-close {
+            top: 5px;
+            right: 20px;
+            position: absolute;
+            background: $white-color;
+            border: none;
+            cursor: pointer;
+
+            &:hover {
+                color: $btn-border;
+            }
+
+        }
+    }
+
+    &__submition {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        background-color: $white-color;
+        transition: background-color 0.8s;
+
+        &:hover {
+            background-color: $add-btn-bckg;
+        }
+    }
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+
+    &__form {
+        display: flex;
+        width: 100%;
+
+        &-item {
+            border: 3px solid $input-border;
+            border-radius: 5px;
+            width: 100%;
+            height: 27px;
+            box-sizing: border-box;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        &-submit {
+            height: 24px;
+            margin-left: 4px;
+            border: 2px solid $black-color;
+            border-radius: 5px;
+            background: $white-color;
+            cursor: pointer;
+            text-align: center;
+
+            &>img {
+                height: 19px;
+                width: 19px;
+                margin: 1px;
+            }
+        }
+    }
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 7px;
+
+    &__edit {
+        display: flex;
+
+        &-sort {
+            height: 20px;
+            width: 20px;
+            cursor: pointer;
+        }
+
+        &-btn {
+            margin-left: 5px;
+            cursor: pointer;
+            background: $white-color;
+            border-radius: 5px;
+            padding: 2px;
+        }
+    }
+
+    &__add {
+        background: $white-color;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        padding-left: 5px;
+        padding-right: 5px;
+        transition: background-color 0.8s;
+
+        &:hover {
+            background-color: $add-btn-bckg;
+        }
+    }
+}
+
+.switcher {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__btn {
+        font-weight: bold;
+        cursor: pointer;
+        border: 3px solid $btn-border;
+        padding: 2px;
+        background: $white-color;
+    }
+
+    &__number {
+        font-weight: bold;
+        background: $white-color;
+        width: 23px;
+        border: 3px solid $black-color;
+        border-radius: 5px;
+        text-align: center;
+    }
+}

@@ -1,25 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import { PhoneBook } from './components/PhoneBook';
+import './styles/App.scss';
+import { ContactInfo } from './components/ContactInfo';
 
-function App() {
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section className='app'>
+      <Routes>
+        <Route path="/" element={<PhoneBook />} />
+        <Route path={`/users/:userId`} element={<ContactInfo />} />
+      </Routes>
+    </section>
   );
 }
 

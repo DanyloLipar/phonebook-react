@@ -1,0 +1,92 @@
+@import '../../styles/vars.scss';
+
+.person {
+    margin-top: 100px;
+    border: 3px solid $black-color;
+    width: 230px;
+
+    &__link {
+        margin-bottom: 3px;
+        margin-left: 5px;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+        color: $black-color;
+
+        &:hover {
+            color: $return-btn;
+        }
+    }
+}
+
+.user {
+    padding: 20px 10px;
+
+    &__title {
+        font-size: 14px;
+        margin-top: 7px;
+        text-decoration: underline;
+
+        &-add {
+            cursor: pointer;
+            width: 20%;
+
+            &:hover {
+                color: $add-btn-bckg;
+            }
+        }
+    }
+
+    &__forms {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &>button {
+            cursor: pointer;
+        }
+
+        &>label {
+            font-size: 8px;
+        }
+    }
+
+    &__name {
+        font-size: 18px;
+        font-weight: bold;
+
+        &-edit {
+            cursor: pointer;
+        }
+    }
+
+    &__numbers {
+        list-style-type: none;
+        margin-top: 3px;
+        margin-bottom: 5px;
+    }
+
+}
+
+.number {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    background: $white-color;
+    border: 1px solid $black-color;
+    margin-top: 5px;
+
+    &__delete {
+        cursor: pointer;
+    }
+}
+
+
+.red {
+    border: 1px solid $return-btn;
+}
+
+.buttons {
+    margin-top: 8px;
+}
